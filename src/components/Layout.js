@@ -5,8 +5,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <Container maxWidth="xl" sx={{ marginTop: "6rem" }}></Container>
-      {children}
+      <Container maxWidth="xl" sx={{ marginTop: "6rem" }}>
+        {children}
+      </Container>
     </>
   );
 }
