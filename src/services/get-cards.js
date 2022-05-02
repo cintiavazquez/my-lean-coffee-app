@@ -5,6 +5,7 @@ import { dbConnect } from "../lib/database";
 export const getCards = async () => {
   await dbConnect();
   const data = await Card.find().populate("user");
+  console.log(data);
   return data.map(({ id, content, user }) => ({
     id,
     content,

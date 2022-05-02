@@ -11,11 +11,14 @@ export default function CardGrid() {
 
   return (
     <Grid container spacing={4}>
-      {data.map((card) => (
-        <Grid item xs={4} key={card.id}>
-          <Card id={card.id} name={card.name} content={card.content} />
-        </Grid>
-      ))}
+      {data.map((card) => {
+        console.log(data + "hey");
+        return (
+          <Grid item xs={4} key={card.id}>
+            <Card id={card.id} name={card.name} content={card.content} />
+          </Grid>
+        );
+      })}
     </Grid>
   );
 }
